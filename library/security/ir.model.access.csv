@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_library_book,access_library_book,model_library_book,,1,1,1,1
-access_library_customer,access_library_customer,model_library_customer,,1,1,1,1
-access_library_rental,access_library_rental,model_library_rental,,1,1,1,1
+access_library_book_user,access_library_book_user,model_library_book,library.group_library_user,1,0,0,0
+access_library_book_manager,access_library_book_manager,model_library_book,library.group_library_manager,1,1,1,1
+access_library_customer_user,access_library_customer_user,model_library_customer,library.group_library_user,0,0,0,0
+access_library_customer_manager,access_library_customer_manager,model_library_customer,library.group_library_manager,1,1,1,1
+access_library_rental_user,access_library_rental_user,model_library_rental,library.group_library_user,1,1,1,0
+access_library_rental_manager,access_library_rental_manager,model_library_rental,library.group_library_manager,1,1,1,1
