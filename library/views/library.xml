@@ -61,6 +61,31 @@
         </field>
     </record>
 
+    <!-- Custom Form View for Rental with statusbar widget for state as first field -->
+    <record id="view_library_rental_form" model="ir.ui.view">
+        <field name="name">library.rental.form</field>
+        <field name="model">library.rental</field>
+        <field name="arch" type="xml">
+            <form string="Rental">
+                <sheet>
+                    <group>
+                        <field name="state" widget="statusbar"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="book"/>
+                            <field name="customer"/>
+                        </group>
+                        <group>
+                            <field name="rent_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="view_library_book_list" model="ir.ui.view">
         <field name="name">library.book.view.list</field>
         <field name="model">library.book</field>

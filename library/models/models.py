@@ -22,3 +22,9 @@ class Rental(models.Model):
     book = fields.Many2one("library.book", "Book")
     customer = fields.Many2one("library.customer", "Customer")
     rent_date = fields.Date("Rental Date")
+    end_date = fields.Date("Return Date")
+    state = fields.Selection([
+        ("ongoing", "Ongoing"),
+        ("overdue", "Overdue"),
+        ("returned", "Returned")
+    ], string="Status", default="ongoing", tracking=True)
