@@ -67,6 +67,9 @@
         <field name="model">library.rental</field>
         <field name="arch" type="xml">
             <form string="Rental">
+                <header>
+                    <button name="action_set_returned" type="object" string="Mark Returned" class="oe_highlight" />
+                </header>
                 <sheet>
                     <group>
                         <field name="state" widget="statusbar"/>

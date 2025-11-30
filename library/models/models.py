@@ -43,3 +43,8 @@ class Rental(models.Model):
         # can't allow end date set before rent_date
         if self.rent_date and self.end_date < self.rent_date:
             raise UserError("WARNING: You shouldn't set the Return Date to be Earlier than Rent Date")
+
+    def action_set_returned(self):
+        for rec in self:
+            rec.state = 'returned'
+        return True
